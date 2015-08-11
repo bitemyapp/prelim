@@ -139,37 +139,36 @@ import Prelude as P(
 --  , readList
 --  )
 --  , ReadS
+    , Real(
+      toRational
+    )
+    , RealFloat(
+      floatRadix
+    , floatDigits
+    , floatRange
+    , decodeFloat
+    , encodeFloat
+    , exponent
+    , significand
+    , scaleFloat
+    , isNaN
+    , isInfinite
+    , isDenormalized
+    , isNegativeZero
+    , isIEEE
+    , atan2
+    )
+    , RealFrac(
+      properFraction
+    , truncate
+    , round
+    , ceiling
+    , floor
+    )
   )
 
 {-
 >> :browse Prelude
-class (GHC.Num.Num a, ghc-prim-0.4.0.0:GHC.Classes.Ord a) =>
-      GHC.Real.Real a where
-  GHC.Real.toRational :: a -> GHC.Real.Rational
-class (GHC.Real.RealFrac a, GHC.Float.Floating a) =>
-      GHC.Float.RealFloat a where
-  GHC.Float.floatRadix ::
-    a -> integer-gmp-1.0.0.0:GHC.Integer.Type.Integer
-  GHC.Float.floatDigits :: a -> ghc-prim-0.4.0.0:GHC.Types.Int
-  GHC.Float.floatRange ::
-    a
-    -> (ghc-prim-0.4.0.0:GHC.Types.Int, ghc-prim-0.4.0.0:GHC.Types.Int)
-  GHC.Float.decodeFloat ::
-    a
-    -> (integer-gmp-1.0.0.0:GHC.Integer.Type.Integer,
-        ghc-prim-0.4.0.0:GHC.Types.Int)
-  GHC.Float.encodeFloat ::
-    integer-gmp-1.0.0.0:GHC.Integer.Type.Integer
-    -> ghc-prim-0.4.0.0:GHC.Types.Int -> a
-  GHC.Float.exponent :: a -> ghc-prim-0.4.0.0:GHC.Types.Int
-  GHC.Float.significand :: a -> a
-  GHC.Float.scaleFloat :: ghc-prim-0.4.0.0:GHC.Types.Int -> a -> a
-  GHC.Float.isNaN :: a -> ghc-prim-0.4.0.0:GHC.Types.Bool
-  GHC.Float.isInfinite :: a -> ghc-prim-0.4.0.0:GHC.Types.Bool
-  GHC.Float.isDenormalized :: a -> ghc-prim-0.4.0.0:GHC.Types.Bool
-  GHC.Float.isNegativeZero :: a -> ghc-prim-0.4.0.0:GHC.Types.Bool
-  GHC.Float.isIEEE :: a -> ghc-prim-0.4.0.0:GHC.Types.Bool
-  GHC.Float.atan2 :: a -> a -> a
 class (GHC.Real.Real a, GHC.Real.Fractional a) =>
       GHC.Real.RealFrac a where
   GHC.Real.properFraction :: GHC.Real.Integral b => a -> (b, a)
