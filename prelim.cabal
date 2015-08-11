@@ -43,6 +43,8 @@ library
 
   exposed-modules:
                     Prelim
+                    Prelim.Add
+                    Prelim.Prelude
 
 test-suite doctests
   type:
