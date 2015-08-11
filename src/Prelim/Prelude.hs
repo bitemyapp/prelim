@@ -169,13 +169,6 @@ import Prelude as P(
 
 {-
 >> :browse Prelude
-class (GHC.Real.Real a, GHC.Real.Fractional a) =>
-      GHC.Real.RealFrac a where
-  GHC.Real.properFraction :: GHC.Real.Integral b => a -> (b, a)
-  GHC.Real.truncate :: GHC.Real.Integral b => a -> b
-  GHC.Real.round :: GHC.Real.Integral b => a -> b
-  GHC.Real.ceiling :: GHC.Real.Integral b => a -> b
-  GHC.Real.floor :: GHC.Real.Integral b => a -> b
 class GHC.Show.Show a where
   GHC.Show.showsPrec ::
     ghc-prim-0.4.0.0:GHC.Types.Int -> a -> GHC.Show.ShowS
