@@ -1,0 +1,5 @@
+* Prelude
+* Prelude type-class method, not exported
+* implemented better (e.g. more general) in base
+* implemented better (e.g. more general) elsewhere (semigroupoids)
+* unsafe (eliminate)
