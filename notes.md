@@ -7,7 +7,7 @@
   * more general e.g. `(<*>)`, `sequenceA`
   * safe e.g. `foldl1`, `maximum` 
 5. Unsafe (eliminate)
-  * `head`, `fromJust`
+  * `head`, `fromJust`, `tail`, `!!`, `init`, `last`, `read`
 
 ----
 
